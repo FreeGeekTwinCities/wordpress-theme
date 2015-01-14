@@ -22,6 +22,7 @@
 		} ?></title>
 		
 		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ; ?>/css/foundation.css" />
+		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ; ?>/css/app.css" />
 
 		<link rel="icon" href="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/icons/favicon.ico" type="image/x-icon">
 		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/icons/apple-touch-icon-144x144-precomposed.png">
@@ -33,22 +34,23 @@
 	</head>
 	<body <?php body_class(); ?>>
 	<?php do_action('foundationPress_after_body'); ?>
-	
+
 	<div class="off-canvas-wrap" data-offcanvas>
 	<div class="inner-wrap">
-	
+
 	<?php do_action('foundationPress_layout_start'); ?>
 	
-	<nav class="tab-bar show-for-small-only">
-		<section class="left-small">
-			<a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
-		</section>
-		<section class="middle tab-bar-section">
-			
-			<h1 class="title"><?php bloginfo( 'name' ); ?></h1>
+		<nav class="tab-bar show-for-small-only">
+			<section class="left-small">
+				<a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+			</section>
+			<section class="middle tab-bar-section">
 
-		</section>
-	</nav>
+				<h1 class="title"><?php bloginfo( 'name' ); ?></h1>
+
+			</section>
+		</nav>
+
 
 	<?php get_template_part('parts/off-canvas-menu'); ?>
 

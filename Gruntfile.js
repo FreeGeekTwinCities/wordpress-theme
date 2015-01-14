@@ -15,7 +15,8 @@ module.exports = function(grunt) {
           outputStyle: 'compressed'
         },
         files: {
-          'css/foundation.css': 'scss/foundation.scss'
+          'css/foundation.css': 'scss/foundation.scss',
+          'css/app.css': 'scss/app.scss'
         }
       }
     },
@@ -38,41 +39,19 @@ module.exports = function(grunt) {
         dist: {
           src: [
 
-          // Foundation core
-          'bower_components/foundation/js/foundation/foundation.js',
-          
-          // Pick the componenets you need in your project
-          'bower_components/foundation/js/foundation/foundation.abide.js',
-          'bower_components/foundation/js/foundation/foundation.accordion.js',
-          'bower_components/foundation/js/foundation/foundation.alert.js',
-          'bower_components/foundation/js/foundation/foundation.clearing.js',
-          'bower_components/foundation/js/foundation/foundation.dropdown.js',
-          'bower_components/foundation/js/foundation/foundation.equalizer.js',
-          'bower_components/foundation/js/foundation/foundation.interchange.js',
-          'bower_components/foundation/js/foundation/foundation.joyride.js',
-          'bower_components/foundation/js/foundation/foundation.magellan.js',
-          'bower_components/foundation/js/foundation/foundation.offcanvas.js',
-          'bower_components/foundation/js/foundation/foundation.orbit.js',
-          'bower_components/foundation/js/foundation/foundation.reveal.js',
-          'bower_components/foundation/js/foundation/foundation.slider.js',
-          'bower_components/foundation/js/foundation/foundation.tab.js',
-          'bower_components/foundation/js/foundation/foundation.tooltip.js',
-          'bower_components/foundation/js/foundation/foundation.topbar.js',
-          
-          // Using all of your custom js files
-          'js/custom/*.js'
-          
+            'js/foundation.js',
+            'js/custom/*.js'
+
           ],
-          // Concat all the files above into one single file
-          dest: 'js/foundation.js',
-        },
+          dest: 'js/app.js'
+        }
       },
 
     uglify: {
       dist: {
         files: {
           // Shrink the file size by removing spaces
-          'js/foundation.js': ['js/foundation.js']
+          'js/app.js': ['js/app.js']
         }
       }
     },

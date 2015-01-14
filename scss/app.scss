@@ -1,0 +1,52 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Helvetica";
+}
+
+@import "config/settings";
+@import "foundation";
+h4 {
+  font-weight: bold;
+}
+.fg-logo {
+  margin: .5rem;
+}
+.top-bar-container {
+  margin-bottom: 0 !important;
+}
+.splash {
+  background :
+  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url(../assets/img/images/IMG_20140102_135321742.jpg);
+  background-size: cover;
+  height: 100vh;
+  position:relative;
+
+
+  .splash-title {
+    position: absolute;
+    top:30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    span {
+      background-color: $primary-color;
+      color: #fff;
+      font-weight: bold;
+      font-size: rem-calc(30);
+      display: inline;
+      padding: 0.5rem;
+
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+    }
+  }
+  .splash-panels {
+    min-width: 90%;
+    position: absolute;
+    top:75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
