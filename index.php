@@ -1,12 +1,16 @@
 <?php get_header(); ?>
 <header class="splash">
+	<div class="splash-social">
+		<i class="fi-social-facebook"></i>
+		<i class="fi-social-twitter"></i>
+		<i class="fi-social-google-plus"></i>
+	</div>
 	<div class="splash-title">
-				<span>
-				Our mission at Free Geek Twin Cities is to reuse or recycle computers
-				and to provide access to computers, the internet, education and job skills
-				in exchange for community service.
-				</span>
-
+		<span>
+		Our mission at Free Geek Twin Cities is to reuse or recycle computers
+		and to provide access to computers, the internet, education and job skills
+		in exchange for community service.
+		</span>
 	</div>
 	<div class="splash-panels">
 		<div class="row">
@@ -29,7 +33,7 @@
 			</div>
 			<div class="large-3 columns">
 				<div class="panel">
-					<h2>Starting</h2>
+					<h2>Start</h2>
 					Every Saturday at 2 is new volunteer orientation.
 				</div>
 			</div>
@@ -43,42 +47,28 @@
 	</div>
 </header>
 <br/>
+<?php if ( have_posts() ) : ?>
 
 
-<div class="row">
-	<div class="large-12 columns" role="main">
-		<h1>Educate</h1>
+	<?php while ( have_posts() ) : the_post(); ?>
+<div>
+	<div class="large-12 columns free-geek" role="main">
+		<?php get_template_part( 'content', get_post_format() ); ?>
 	</div>
 </div>
+	<?php endwhile; ?>
 
-<div class="row">
-	<div class="large-12 columns">
-		<h1>Equip</h1>
-	</div>
-</div>
+<?php else : ?>
+	<?php get_template_part( 'content', 'none' ); ?>
 
-<div class="row">
-	<div class="large-12 columns">
-		<h1>E-cycle</h1>
-	</div>
-</div>
+	<?php do_action('foundationPress_before_pagination'); ?>
+
+<?php endif;?>
 
 <div class="row">
 	<div class="large-6 medium-12 columns">
 		<h4>News </h4>
-		<?php if ( have_posts() ) : ?>
 
-
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', get_post_format() ); ?>
-			<?php endwhile; ?>
-
-		<?php else : ?>
-			<?php get_template_part( 'content', 'none' ); ?>
-
-			<?php do_action('foundationPress_before_pagination'); ?>
-
-		<?php endif;?>
 
 	</div>
 	<div class="large-6 medium-12 columns">
