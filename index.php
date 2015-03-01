@@ -1,4 +1,7 @@
-<?php get_header(); ?>
+<?php
+get_header();
+?>
+
 <header class="splash">
 	<div class="splash-social">
 		<i class="fi-social-facebook"></i>
@@ -19,7 +22,7 @@
 					<h2>When</h2>
 					Wed  Thur   Fri  Sat   Sun
 					Noon till 5 pm
-					Closed:   Mon & Tues
+					Closed:   Mon &amp; Tues
 				</div>
 			</div>
 			<div class="large-3 columns">
@@ -40,22 +43,20 @@
 			<div class="large-3 columns">
 				<div class="panel">
 					<h2>Grants</h2>
-					We have hardware available to non-profits.  Contact us @ info@freegeektwincities.org
+					We have hardware available to non-profits.  <a href="info@freegeektwincities.org">Contact us</a>
 				</div>
 			</div>
 		</div>
 	</div>
 </header>
-<br/>
 <?php if ( have_posts() ) : ?>
 
+	<?php query_posts('category_name=featured'); ?>
 
 	<?php while ( have_posts() ) : the_post(); ?>
-<div>
-	<div class="large-12 columns free-geek" role="main">
+	<div class="large-12 flush columns free-geek" role="main">
 		<?php get_template_part( 'content', get_post_format() ); ?>
 	</div>
-</div>
 	<?php endwhile; ?>
 
 <?php else : ?>
@@ -65,9 +66,18 @@
 
 <?php endif;?>
 
-<div class="row">
+<!-- <div class="row">
 	<div class="large-6 medium-12 columns">
 		<h4>News </h4>
+		<?php if ( have_posts() ) : ?>
+			<?php query_posts('category_name=news&posts_per_page=1'); ?>
+
+			<?php do_action('foundationPress_before_content'); ?>
+
+			<?php while (have_posts()) : the_post(); ?>
+					<?php get_template_part('news', get_post_format()); ?>
+			<?php endwhile; ?>
+		<?php endif;?>
 
 
 	</div>
@@ -75,6 +85,6 @@
 		<h4>@FreeGeek_TC</h4>
 	</div>
 	<?php do_action('foundationPress_after_content'); ?>
-</div>
+</div> -->
 
 <?php get_footer(); ?>
