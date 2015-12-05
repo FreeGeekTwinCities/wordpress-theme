@@ -1,17 +1,29 @@
-<div class="top-bar-container contain-to-grid show-for-medium-up sticky">
+<div class="top-bar-container contain-to-grid show-for-medium-up">
     <nav class="top-bar" data-topbar data-options="sticky_on: large" role="navigation">
         <ul class="title-area">
             <li class="name">
                 <h1>
                     <a href="<?php echo home_url(); ?>">
-                        <img class="fg-logo" style="height: 80px;" src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/FreeGeekTC_4cLogo.gif"/>
+                        <img class="fg-logo" src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/FreeGeekTC_4cLogo.gif"/>
                     </a>
                 </h1>
             </li>
         </ul>
+
         <section class="top-bar-section">
-            <?php foundationPress_top_bar_l(); ?>
-            <?php foundationPress_top_bar_r(); ?>
+          <?php foundationPress_top_bar_l(); ?>
+          <?php foundationPress_top_bar_r(); ?>
+          <!-- <ul class="left">
+            <li>
+              <a href=""><i class="fi-social-facebook"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fi-social-twitter"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fi-social-google-plus"></i></a>
+            </li>
+          </ul> -->
         </section>
     </nav>
 </div>

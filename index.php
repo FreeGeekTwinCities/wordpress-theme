@@ -2,12 +2,8 @@
 get_header();
 ?>
 
-<header class="splash">
-	<div class="splash-social">
-		<i class="fi-social-facebook"></i>
-		<i class="fi-social-twitter"></i>
-		<i class="fi-social-google-plus"></i>
-	</div>
+<!-- <header class="splash">
+
 	<div class="splash-title">
 		<span>
 		Our mission at Free Geek Twin Cities is to reuse or recycle computers
@@ -48,43 +44,54 @@ get_header();
 			</div>
 		</div>
 	</div>
-</header>
-<?php if ( have_posts() ) : ?>
+</header> -->
+<ul class="large-block-grid-3 top-panels">
+	<?php if ( have_posts() ) : ?>
 
-	<?php query_posts('category_name=featured'); ?>
+		<?php query_posts('category_name=featured&numberposts=3'); ?>
 
-	<?php while ( have_posts() ) : the_post(); ?>
-	<div class="large-12 flush columns free-geek" role="main">
-		<?php get_template_part( 'content', get_post_format() ); ?>
-	</div>
-	<?php endwhile; ?>
+		<?php while ( have_posts() ) : the_post(); ?>
+			<?php $position = $wp_query->current_post+1; ?>
+			<!-- <?php if ( $position == 2) : ?>
+				<li>
+					<ul class="large-block-grid-2">
+			<?php endif; ?> -->
+		<li class="panel-<?php echo $wp_query->current_post+1; ?>">
+			<?php get_template_part( 'content', get_post_format() ); ?>
+		</li>
+			<!-- <?php if ( $position == 3) : ?>
+				</ul>
+			</li>
+			<?php endif; ?> -->
+		<?php endwhile; ?>
 
-<?php else : ?>
-	<?php get_template_part( 'content', 'none' ); ?>
+	<?php else : ?>
+		<?php get_template_part( 'content', 'none' ); ?>
 
-	<?php do_action('foundationPress_before_pagination'); ?>
+		<?php do_action('foundationPress_before_pagination'); ?>
 
-<?php endif;?>
-
-<!-- <div class="row">
-	<div class="large-6 medium-12 columns">
-		<h4>News </h4>
+	<?php endif;?>
+</ul>
+<?php wp_reset_query(); ?>
+<div class="row">
+	<div class="large-8 columns">
+		<h4>FGTC News</h4>
 		<?php if ( have_posts() ) : ?>
-			<?php query_posts('category_name=news&posts_per_page=1'); ?>
 
-			<?php do_action('foundationPress_before_content'); ?>
-
-			<?php while (have_posts()) : the_post(); ?>
-					<?php get_template_part('news', get_post_format()); ?>
+			<?php query_posts('category_name=news&numberposts=3'); ?>
+			<?php while ( have_posts() ) : the_post(); ?>
+			<div class="panel-<?php echo $wp_query->current_post+1; ?>">
+				<?php get_template_part( 'content', get_post_format() ); ?>
+			</div>
 			<?php endwhile; ?>
+		<?php else : ?>
+			<?php get_template_part( 'content', 'none' ); ?>
+
+			<?php do_action('foundationPress_before_pagination'); ?>
+
 		<?php endif;?>
-
-
 	</div>
-	<div class="large-6 medium-12 columns">
-		<h4>@FreeGeek_TC</h4>
-	</div>
-	<?php do_action('foundationPress_after_content'); ?>
-</div> -->
+	<?php get_sidebar(); ?>
+</div>
 
 <?php get_footer(); ?>
