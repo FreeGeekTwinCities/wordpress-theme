@@ -75,12 +75,12 @@ get_header();
 <?php wp_reset_query(); ?>
 <div class="row">
 	<div class="large-8 columns">
-		<h4>FGTC News</h4>
+		<h4 class="news-header">FGTC News</h4>
 		<?php if ( have_posts() ) : ?>
 
 			<?php query_posts('category_name=news&numberposts=3'); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-			<div class="panel-<?php echo $wp_query->current_post+1; ?>">
+			<div class="news-post panel-<?php echo $wp_query->current_post+1; ?>">
 				<?php get_template_part( 'content', get_post_format() ); ?>
 			</div>
 			<?php endwhile; ?>
