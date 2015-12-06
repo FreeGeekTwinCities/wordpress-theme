@@ -188,6 +188,7 @@ article.format-standard {
       transform: translate(-50%, -50%);
       text-align: center;
       z-index: 98;
+			background-color: rgba(30, 30, 30, 0.5);
     }
     .article-content {
       color: #fff;
@@ -197,7 +198,6 @@ article.format-standard {
       text-align: center;
       -webkit-box-decoration-break: clone;
       box-decoration-break: clone;
-
     }
   }
 }
