@@ -13,17 +13,6 @@
         <section class="top-bar-section">
           <?php foundationPress_top_bar_l(); ?>
           <?php foundationPress_top_bar_r(); ?>
-          <!-- <ul class="left">
-            <li>
-              <a href=""><i class="fi-social-facebook"></i></a>
-            </li>
-            <li>
-              <a href=""><i class="fi-social-twitter"></i></a>
-            </li>
-            <li>
-              <a href=""><i class="fi-social-google-plus"></i></a>
-            </li>
-          </ul> -->
         </section>
     </nav>
 </div>

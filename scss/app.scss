@@ -255,3 +255,25 @@ article.format-standard {
 		padding: 0.5rem;
 	}
 }
+.ctn-top-bar {
+  background-color: $secondary-color;
+  text-align: center;
+  line-height: 1.2rem;
+  h3 {
+    display: inline;
+    font-size: .9rem;
+    width: 100%;
+    color: #fff;
+  }
+  p {
+    display: inline-block;
+    font-size: .8rem;
+    color: #fff;
+    margin-bottom: 0;
+  }
+
+  i {
+    color: #fff;
+    right: 10px;
+  }
+}

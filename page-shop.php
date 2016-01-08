@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Volunteer
+Template Name: Shop
 */
 get_header(); ?>
 <div class="row">
