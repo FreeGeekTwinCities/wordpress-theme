@@ -10,6 +10,7 @@ h4 {
 }
 .fg-logo {
 	margin: .5rem;
+	max-height: 90px;
 }
 .top-bar-container {
 	margin-bottom: 0 !important;
@@ -201,8 +202,9 @@ article.format-standard {
     }
   }
 }
-footer {
+.inner-wrap>footer {
 	background-color: #333;
+
 	ul {
 		padding: .5rem;
 		list-style : none;
