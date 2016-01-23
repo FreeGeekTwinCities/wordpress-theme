@@ -8,7 +8,7 @@ get_header();
 <?php endwhile; ?>
 <?php wp_reset_query(); ?>
 <?php endif; ?>
-<ul class="large-block-grid-3 top-panels">
+<ul class="large-block-grid-3 medium-block-grid-3 top-panels">
 	<?php if ( have_posts() ) : ?>
 
 		<?php query_posts('category_name=homepage&numberposts=3'); ?>
@@ -37,7 +37,7 @@ get_header();
 </ul>
 <?php wp_reset_query(); ?>
 <div class="row">
-	<div class="large-8 columns">
+	<div class="large-8 medium-6 columns">
 		<h4 class="news-header">FGTC News</h4>
 		<?php if ( have_posts() ) : ?>
 
