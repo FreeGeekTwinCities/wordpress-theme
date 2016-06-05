@@ -78,11 +78,43 @@ section.container {
 		padding: .5rem;
 	}
 }
-
+article {
+	#featured-hero {
+		background-size: cover;
+		min-height: 300px;
+		background-repeat:   no-repeat;
+		background-position: center center;
+		margin-bottom: 1rem;
+		h3 {
+			padding: 10px;
+			background-color: $primary-color;
+			margin: 10px;
+			color: $white;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+	}
+	.entry-content {
+		h3 {
+			padding: 10px 20px;
+			background-color: $primary-color;
+			color: $white;
+			font-weight: bold;
+		}
+		.store-embed {
+			iframe {
+				border: none;
+				width: 100%;
+				min-height: 300px;
+			}
+		}
+	}
+}
 article.format-standard {
 	header {
 		min-height: 30px;
 		padding: 0.5rem;
+
 		h2 a, a {
 			color : #333;
 		}

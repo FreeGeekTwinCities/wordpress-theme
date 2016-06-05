@@ -62,6 +62,42 @@
 					</a>
 				</li>
 			</ul>
+			<div>
+				<form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
+					<input type="hidden" name="list" value="announce" />
+					<input type="hidden" name="domain" value="freegeektwincities.org" />
+
+					    <!-- Optional: -->
+					<input type="hidden" name="unsuburl" value="http://freegeektwincities.org/newsletter/unsubscribe" />
+					<input type="hidden" name="alreadyonurl" value="_http://AlreadyOnURL_" />
+					<input type="hidden" name="notonurl" value="_http://NotOnURL_" />
+					<input type="hidden" name="invalidurl" value="_http://InvalidURL_" />
+					<input type="hidden" name="emailconfirmurl" value="_http://EmailConfirmURL_" />
+					<input type="hidden" name="emailit" value="1" />
+					<div class="row">
+						<div class="large-12 columns">
+							<label>First and Last</label>
+								<input type="text" name="name" placeholder="Name"/>
+						</div>
+						<div class="large-12 columns">
+							<label>E-mail</label>
+								<input type="email" name="email" placeholder="Email"/>
+						</div>
+						<div class="large-12 columns">
+							<label>Confirm E-mail</label>
+								<input type="email" name="email" placeholder="address2"/>
+						</div>
+						<div class="large-12 columns">
+							<button class="btn btn-primary">Stay updated with Free Geek</button>
+							<input type="submit" name="submit" value="_Join Our Announcement List_" />
+						</div>
+						<div class="large-12 columns">
+							<button class="btn btn-primary">Unsubscribe</button>
+							<input type="submit" name="unsub" value="_Remove previous notification_" />
+						</div>
+					</div>
+				</form>
+			</div>
 		</div>
 	</div>
 </footer>
