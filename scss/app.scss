@@ -79,11 +79,7 @@ section.container {
 	}
 }
 article {
-	#featured-hero {
-		background-size: cover;
-		min-height: 300px;
-		background-repeat:   no-repeat;
-		background-position: center center;
+	header {
 		margin-bottom: 1rem;
 		h3 {
 			padding: 10px;
@@ -93,6 +89,12 @@ article {
 			font-weight: bold;
 			text-transform: uppercase;
 		}
+	}
+	.banner {
+		min-height: 300px;
+		background-size: cover;
+		background-repeat:   no-repeat;
+		background-position: center center;
 	}
 	.entry-content {
 		h3 {
@@ -106,6 +108,16 @@ article {
 				border: none;
 				width: 100%;
 				min-height: 300px;
+			}
+		}
+	}
+	.featured-item {
+		header {
+			min-height: 300px;
+			h4 {
+				color: $white;
+				padding: 10px;
+				background-color: $secondary-color;
 			}
 		}
 	}

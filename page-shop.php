@@ -17,6 +17,7 @@ get_header(); ?>
 						?>
 					<div class="large-12 columns">
 						<header id="featured-hero"
+										class="banner"
 										role="banner"
 										style="background-image: url('<?php echo $image ?>');">
 							<h3 class="post-title small-3 medium-3 large-3 columns">
@@ -35,12 +36,25 @@ get_header(); ?>
 						<?php the_content(); ?>
 					</div>
 					<div class="entry-content large-6 columns">
-						<h3>Currently in Stock</h3>
-						<div class="store-embed">
-							<?php echo get_field("store_stock"); ?>
-							<iframe src="https://docs.google.com/spreadsheets/d/1uW4onVv6rOp3WPN_MhwR8agiDk2gAHGvwNAwrBWrg9Y/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+						<h3>Featured Item</h3>
+						<?php
+						wp_reset_postdata();
+
+				    /*
+				     * The secondary query. Note that you can use any category name here. In our example,
+				     * we use "example-category".
+				     */
+				    $secondary_query = new WP_Query( 'category_name=Featured Item&posts_per_page=1' );
+						while ( $secondary_query->have_posts() ) :
+				        $secondary_query->the_post();
+				    // The second loop. if ( $secondary_query->have_posts() )
+						?>
+						<?php get_template_part( 'post-featured-item', get_post_format() ); ?>
+						<?php
+						endwhile;
+						wp_reset_postdata();
+						?>
 						</div>
-					</div>
 				</div>
 				<footer>
 				</footer>
