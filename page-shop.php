@@ -54,6 +54,14 @@ get_header(); ?>
 						endwhile;
 						wp_reset_postdata();
 						?>
+						<div class="row">
+							<article class="large-12 columns featured-item">
+								<h3 class="entry-title">Store Inventory</h3>
+								<div class="entry-content large-12 columns">
+									<?php echo get_field("store_inventory"); ?>
+								</div>
+							</article>
+						</div>
 						</div>
 				</div>
 				<footer>

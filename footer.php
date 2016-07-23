@@ -31,6 +31,11 @@
 		</div>
 		<div class="large-4 small-12 columns">
 			<h4>Location</h4>
+			<div class="address">
+				<p>2537 25th Ave S</p>
+				<p>Minneapolis, MN 55406</p>
+				<p>Entrance facing the alley</p>
+			</div>
 			<iframe width="100%"
 							frameborder="0"
 							scrolling="no"
@@ -63,11 +68,10 @@
 				</li>
 			</ul>
 			<div>
-				<form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
+				<!-- <form method="post" action="http://scripts.dreamhost.com/add_list.cgi">
 					<input type="hidden" name="list" value="announce" />
 					<input type="hidden" name="domain" value="freegeektwincities.org" />
 
-					    <!-- Optional: -->
 					<input type="hidden" name="unsuburl" value="http://freegeektwincities.org/newsletter/unsubscribe" />
 					<input type="hidden" name="alreadyonurl" value="_http://AlreadyOnURL_" />
 					<input type="hidden" name="notonurl" value="_http://NotOnURL_" />
@@ -85,24 +89,27 @@
 						</div>
 						<div class="large-12 columns">
 							<label>Confirm E-mail</label>
-								<input type="email" name="email" placeholder="address2"/>
+								<input type="email"
+									name="email"
+									placeholder="Confirm Email"/>
 						</div>
 						<div class="large-12 columns">
-							<button class="btn btn-primary">Stay updated with Free Geek</button>
-							<input type="submit" name="submit" value="_Join Our Announcement List_" />
+							<button class="btn btn-primary" name="submit">
+								Stay updated with Free Geek
+							</button>
 						</div>
 						<div class="large-12 columns">
-							<button class="btn btn-primary">Unsubscribe</button>
-							<input type="submit" name="unsub" value="_Remove previous notification_" />
+							<button class="btn btn-primary" name="unsub" >
+								Unsubscribe
+							</button>
 						</div>
 					</div>
-				</form>
+				</form> -->
 			</div>
 		</div>
 	</div>
 </footer>
 <a class="exit-off-canvas"></a>
-
 	<?php do_action('foundationPress_layout_end'); ?>
 	</div>
 </div>
