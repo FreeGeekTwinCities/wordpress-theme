@@ -1392,7 +1392,7 @@ $topbar-link-color: $primary-color;
 // $topbar-link-color-active: $white;
 // $topbar-link-color-active-hover: $white;
 $topbar-link-weight: bold;
-$topbar-link-font-size: rem-calc(33);
+$topbar-link-font-size: rem-calc(22);
 $topbar-link-hover-lightness: 25%; // Darken by 10%
 $topbar-link-bg: $topbar-bg;
 $topbar-link-bg-color-hover: $white;
@@ -1401,7 +1401,7 @@ $topbar-link-bg-hover: $primary-color;
 // $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
 // $topbar-link-font-family: $body-font-family;
 // $topbar-link-text-transform: none;
-// $topbar-link-padding: ($topbar-height / 3);
+$topbar-link-padding: ($topbar-height / 4);
 // $topbar-back-link-size: $h5-font-size;
 // $topbar-link-dropdown-padding: 20px;
 
