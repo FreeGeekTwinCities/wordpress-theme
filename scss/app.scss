@@ -114,6 +114,9 @@ article {
 	.featured-item {
 		header {
 			min-height: 300px;
+			background-repeat: no-repeat;
+			background-position: center center;
+
 			h4 {
 				color: $white;
 				padding: 10px;
@@ -286,7 +289,7 @@ h6, h4, .widget-easy-twitter-feed-widget-container h6 {
 	font-weight: bold;
 }
 h4 {
-	font-size: 1.5;
+	font-size: 1.5rem;
 }
 
 .widget-easy-twitter-feed-widget-row, .news-post {
