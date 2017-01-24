@@ -16,15 +16,15 @@
 					</tr>
 					<tr>
 						<td>Wednesday</td>
-						<td>12-5</td>
+						<td>12-5 Donations, Store, Volunteers</td>
 					</tr>
 					<tr>
 						<td>Thursday-Friday</td>
-						<td>12-5 STORE ONLY</td>
+						<td>12-5 Donations and Store Only</td>
 					</tr>
 					<tr>
 						<td>Saturday-Sunday</td>
-						<td>12-5</td>
+						<td>12-5 Donations, Store, Volunteers</td>
 					</tr>
 				</tbody>
 			</table>
